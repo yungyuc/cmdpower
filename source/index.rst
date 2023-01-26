@@ -9,14 +9,13 @@ Welcome to cmdpower's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
-   Develop environment setup
-   Introduction to command line
-   Text processing
-   Developing on CLI
-   System management
-   Work on a remote machine
 
+   Develop environment setup <ch0>
+   Introduction to command line <ch1>
+   Text processing <ch2>
+   Developing on CLI <ch3>
+   System management <ch4>
+   Work on a remote machine <ch5>
 
 Indices and tables
 ==================
