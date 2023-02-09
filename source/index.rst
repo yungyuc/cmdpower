@@ -10,12 +10,13 @@ Welcome to cmdpower's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Develop environment setup <ch0>
-   Introduction to command line <ch1>
-   Text processing <ch2>
-   Developing on CLI <ch3>
-   System management <ch4>
-   Work on a remote machine <ch5>
+   開始之前<ch0>
+   1. 學習指令列<ch1>
+   2. 檔案與目錄管理 <ch2>
+   3. 使用指令列做文字處理<ch3>
+   4. 程序管理<ch4>
+   5. Work on a remote machine<ch5>
+   6. 撰寫腳本 (shell script)<ch6>
 
 Indices and tables
 ==================
