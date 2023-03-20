@@ -91,10 +91,60 @@
      This AN apple.
      Hello world.
 
-
-
 3.2 ``cut`` 
 ================
+
+指令 ``cut`` 主要是用來做文字擷取，並將結果輸出。 ``cut`` 會針對每一行輸入作切分，來取的我們需要的文字。
+常見的切分方式有 3 種。
+     1. 使用位元組 (bytes)
+     2. 使用字元 (characters)
+     3. 使用區塊 (fields)
+
+
+.. highlight::bash
+
+``cut`` 的使用格式::
+
+     cut OPTION... [FILE]...
+
+從 ``cut`` 的定義格式來看，我們必須明確定義 OPTION。否則將會得到錯誤::
+     
+     $cut input.txt
+     cut: you must specify a list of bytes, characters, or fields
+     Try 'cut --help' for more information.
+
+``-b`` 
+************
+``-b, --byte`` ，意指使用位元組 (byte) 來定義文字擷取的範圍。因為每一個字元 (character) 的長度是
+1 個位元組，所以我們可以使用
+
+.. highlight::bash
+
+明確標示位元組的位置::
+
+     $cut -b 1,2,3 input_cut.txt
+
+使用連字符號 (``-``) 來標示位元組的範圍::
+
+     $cut -b 1-3,6-9 input_cut.txt
+     $cut -b 1- input_cut.txt
+     $cut -b -3 input_cut.txt
+
+
+``-d``
+**********
+``-d, --delimiter``，使用自訂的分隔符號 (delimiter) 來切分文字。可以和下一個 ``-f`` 搭配使用。
+
+``-f``
+***********
+``-f, --fields``， ``-f`` 預設使用 TAB 當作分隔符號來切分輸入的字串，
+並依據我們設定的數字，擷取特定範圍的欄位(field)。
+
+.. highlight::bash
+
+     $cut -f 2 input.txt
+     $cut -d " " -f 1-2 input.txt #使用空白作為分隔符號，並輸出第 1~2 個欄位。
+
 
 3.3 ``awk`` 
 ================
